@@ -60,6 +60,8 @@ Academic Excellence: 3.91 / 4.00 GPA
   <img src="https://github.com/user-attachments/assets/0285fde2-b57d-4946-8048-af2496c9a8a2" width="250" alt="Replacement Piano Key">
 </a>
 
+[![View on GitHub](https://img.shields.io/badge/View_on_GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/hyrumsycamore/CVP-103_piano_keys/tree/main)
+
 * **Focus:** Reverse Engineering & Additive Manufacturing.  
 * **Modeling:** Replicated vintage digital piano components by laser-scanning original parts and reconstructing complex geometries in AutoCAD.  
 * **Prototyping:** Utilized 3D printing for iterative design testing, refining mechanical tolerances through multiple prints to restore original tactile response.  
