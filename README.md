@@ -26,11 +26,11 @@ Academic Excellence: 3.91 / 4.00 GPA
   Focus: Statistical Learning & Engineering Applications.
   Key Skills: Implementing foundational ML algorithms (classification, regression, and clustering) specifically for engineering data; applying models to dynamical systems and time-series data—directly supporting my interest in autonomous drone and robotic navigation.
 
-## 🚀 Completed Projects
+## ------------------- Completed Projects-------------------
 
 ---
 
-### 🎮 Luigi’s Mansion Game
+### Luigi’s Mansion Game
 * **Focus:** Embedded Systems & Low-Level Driver Development.  
 * **Driver Development:** Engineered custom peripheral drivers from scratch for the ESP32, including hardware abstractions for UART communication, digital button inputs, and analog joysticks.  
 * **Audio Engineering:** Developed a dedicated sound driver to handle real-time playback of game sound effects, managing timing and signal output.  
@@ -39,14 +39,14 @@ Academic Excellence: 3.91 / 4.00 GPA
 
 ---
 
-### 💻 Custom Language Compiler
+### Custom Language Compiler
 * **Focus:** Software Engineering & Language Design.  
 * **Architecture:** Developed a functional compiler for a specialized SQL-like syntax using C++ as the foundation.  
 * **Implementation:** Engineered lexical analysis and parsing logic to translate domain-specific commands into structured, executable code.  
 
 ---
 
-### 🤖 Light Following Robot
+### Light Following Robot
 * **Focus:** Autonomous Systems & Sensor Fusion.  
 * **Hardware:** Engineered an Arduino Nano-based mobile robot equipped with photoresistors and ultrasonic sensors for environment mapping.  
 * **Control Logic:** Developed autonomous navigation algorithms for light-tracking and reactive obstacle avoidance.  
@@ -55,7 +55,7 @@ Academic Excellence: 3.91 / 4.00 GPA
 ---
 
 
-### 🎹 Replacement Piano Key
+### Replacement Piano Key
 <a href="https://github.com/hyrumsycamore/CVP-103_piano_keys/tree/main">
   <img src="https://github.com/user-attachments/assets/0285fde2-b57d-4946-8048-af2496c9a8a2" width="250" alt="Replacement Piano Key">
 </a>
