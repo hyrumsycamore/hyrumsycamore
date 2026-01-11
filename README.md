@@ -43,7 +43,7 @@ Academic Excellence: 3.91 / 4.00 GPA
   Hardware: Engineered an Arduino Nano-based mobile robot equipped with photoresistors and ultrasonic sensors for environment mapping.
   Control Logic: Developed autonomous navigation algorithms for light-tracking and reactive obstacle avoidance.
   Signal Processing: Applied software-level signal filtering to interpret sensor data accurately and minimize jitter in variable lighting environments.
-# Replacement Piano Key
+# [![Replacement Piano Key ](https://github.com/user-attachments/assets/0285fde2-b57d-4946-8048-af2496c9a8a2)]((https://github.com/hyrumsycamore/CVP-103_piano_keys/tree/main))
   Focus: Reverse Engineering & Additive Manufacturing.
   Modeling: Replicated vintage digital piano components by laser-scanning original parts and reconstructing complex geometries in AutoCAD.
   Prototyping: Utilized 3D printing for iterative design testing, refining mechanical tolerances through multiple prints to restore original tactile response.
