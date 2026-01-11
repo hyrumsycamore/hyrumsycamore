@@ -26,47 +26,59 @@ Academic Excellence: 3.91 / 4.00 GPA
   Focus: Statistical Learning & Engineering Applications.
   Key Skills: Implementing foundational ML algorithms (classification, regression, and clustering) specifically for engineering data; applying models to dynamical systems and time-series data—directly supporting my interest in autonomous drone and robotic navigation.
 
-# ------------------- Completed Projects ------------------- #
+## 🚀 Completed Projects
 
-# Luigi’s Mansion Game
-  Focus: Embedded Systems & Low-Level Driver Development.
-  Driver Development: Engineered custom peripheral drivers from scratch for the ESP32, including hardware abstractions for UART communication, digital button inputs, and analog joysticks.
-  Audio Engineering: Developed a dedicated sound driver to handle real-time playback of game sound effects, managing timing and signal output.
-  Networking: Designed a custom UART-based communication protocol to synchronize game states and player movement between two independent hardware units.
-  Graphics & Logic: Programmed a custom rendering engine and gameplay loop, integrating real-time user input with low-latency responsiveness.
-# Custom Language Compiler
-  Focus: Software Engineering & Language Design.
-  Architecture: Developed a functional compiler for a specialized SQL-like syntax using C++ as the foundation.
-  Implementation: Engineered lexical analysis and parsing logic to translate domain-specific commands into structured, executable code.
-# Light Following Robot
-  Focus: Autonomous Systems & Sensor Fusion.
-  Hardware: Engineered an Arduino Nano-based mobile robot equipped with photoresistors and ultrasonic sensors for environment mapping.
-  Control Logic: Developed autonomous navigation algorithms for light-tracking and reactive obstacle avoidance.
-  Signal Processing: Applied software-level signal filtering to interpret sensor data accurately and minimize jitter in variable lighting environments.
-# [![Replacement Piano Key ](https://github.com/user-attachments/assets/0285fde2-b57d-4946-8048-af2496c9a8a2)](https://github.com/hyrumsycamore/CVP-103_piano_keys/tree/main)
-  Focus: Reverse Engineering & Additive Manufacturing.
-  Modeling: Replicated vintage digital piano components by laser-scanning original parts and reconstructing complex geometries in AutoCAD.
-  Prototyping: Utilized 3D printing for iterative design testing, refining mechanical tolerances through multiple prints to restore original tactile response.
-  Validation: Verified material durability and structural integrity to ensure the replacement keys met the original equipment manufacturer (OEM) specifications.
+---
+
+### 🎮 Luigi’s Mansion Game
+* **Focus:** Embedded Systems & Low-Level Driver Development.  
+* **Driver Development:** Engineered custom peripheral drivers from scratch for the ESP32, including hardware abstractions for UART communication, digital button inputs, and analog joysticks.  
+* **Audio Engineering:** Developed a dedicated sound driver to handle real-time playback of game sound effects, managing timing and signal output.  
+* **Networking:** Designed a custom UART-based communication protocol to synchronize game states and player movement between two independent hardware units.  
+* **Graphics & Logic:** Programmed a custom rendering engine and gameplay loop, integrating real-time user input with low-latency responsiveness.  
+
+---
+
+### 💻 Custom Language Compiler
+* **Focus:** Software Engineering & Language Design.  
+* **Architecture:** Developed a functional compiler for a specialized SQL-like syntax using C++ as the foundation.  
+* **Implementation:** Engineered lexical analysis and parsing logic to translate domain-specific commands into structured, executable code.  
+
+---
+
+### 🤖 Light Following Robot
+* **Focus:** Autonomous Systems & Sensor Fusion.  
+* **Hardware:** Engineered an Arduino Nano-based mobile robot equipped with photoresistors and ultrasonic sensors for environment mapping.  
+* **Control Logic:** Developed autonomous navigation algorithms for light-tracking and reactive obstacle avoidance.  
+* **Signal Processing:** Applied software-level signal filtering to interpret sensor data accurately and minimize jitter in variable lighting environments.  
+
+---
+
+### 🎹 Replacement Piano Key
+[![Replacement Piano Key](https://github.com/user-attachments/assets/0285fde2-b57d-4946-8048-af2496c9a8a2)](https://github.com/hyrumsycamore/CVP-103_piano_keys/tree/main)
+* **Focus:** Reverse Engineering & Additive Manufacturing.  
+* **Modeling:** Replicated vintage digital piano components by laser-scanning original parts and reconstructing complex geometries in AutoCAD.  
+* **Prototyping:** Utilized 3D printing for iterative design testing, refining mechanical tolerances through multiple prints to restore original tactile response.  
+* **Validation:** Verified material durability and structural integrity to ensure the replacement keys met OEM specifications.
 
 # ------------------- In Progress Projects ------------------- #
 
 # Laser Tag Gun
-  Focus: Analog Signal Processing & Wireless Communication.
-  Development: Designing a custom-built system using an ESP32 microcontroller.
-  Hardware: Developing a custom PCB that manages shot transmission via LED and reception through a photodiode.
-  Signal Integrity: Implementing an amplifying band-pass filter to isolate specific signal frequencies and minimize environmental noise.
-  Interactivity: Integrating a digital display and synchronized sound effects for real-time user feedback.
+  Focus: Analog Signal Processing & Wireless Communication.  
+  Development: Designing a custom-built system using an ESP32 microcontroller.  
+  Hardware: Developing a custom PCB that manages shot transmission via LED and reception through a photodiode.  
+  Signal Integrity: Implementing an amplifying band-pass filter to isolate specific signal frequencies and minimize environmental noise.  
+  Interactivity: Integrating a digital display and synchronized sound effects for real-time user feedback.  
 # Handheld Game Console
-  Focus: Low-level Driver Development & Protocol Integration.
-  Design: Engineering a battery-powered emulator featuring a custom PCB and integrated physical controls.
-  Communication: Stitched together custom and existing drivers to manage SPI for display output and I2C for ADC communication.
-  Firmware: Developed a custom driver to interface an analog joystick with the RetroPie software environment. 
+  Focus: Low-level Driver Development & Protocol Integration.  
+  Design: Engineering a battery-powered emulator featuring a custom PCB and integrated physical controls.  
+  Communication: Stitched together custom and existing drivers to manage SPI for display output and I2C for ADC communication.  
+  Firmware: Developed a custom driver to interface an analog joystick with the RetroPie software environment.   
 # Lightsaber Belt
-  Focus: Power Management & Interactive Hardware.
-  System Architecture: Developing a wearable belt featuring addressable RGB strips and a custom buckle housing integrated speakers.
-  PCB Design: Engineering a multi-layer board to handle lithium battery management, audio amplification, and LED control logic.
-  User Interface: Implementing a microcontroller-based UI to allow for on-the-fly customization of blade animations and sound profiles.
+  Focus: Power Management & Interactive Hardware.  
+  System Architecture: Developing a wearable belt featuring addressable RGB strips and a custom buckle housing integrated speakers.  
+  PCB Design: Engineering a multi-layer board to handle lithium battery management, audio amplification, and LED control logic.  
+  User Interface: Implementing a microcontroller-based UI to allow for on-the-fly customization of blade animations and sound profiles.  
   
 # ------------------- Future Project Ideas ------------------- #
   I love using engineering to solve problems for the people I care about. 
