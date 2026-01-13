@@ -31,6 +31,11 @@ Academic Excellence: 3.91 / 4.00 GPA
 ---
 
 ### Luigi’s Mansion Game
+<a href="https://github.com/hyrumsycamore/Luigis_Mansion">
+  <img src="https://github.com/user-attachments/assets/bf6660f4-f4ee-4ef3-a0ef-0e44477a92e7" width="250" alt="Console View">
+</a>
+
+**[🔗 Click here to view the Full Project Repository](https://github.com/hyrumsycamore/CVP-103_piano_keys/tree/main)**
 * **Focus:** Embedded Systems & Low-Level Driver Development.  
 * **Driver Development:** Engineered custom peripheral drivers from scratch for the ESP32, including hardware abstractions for UART communication, digital button inputs, and analog joysticks.  
 * **Audio Engineering:** Developed a dedicated sound driver to handle real-time playback of game sound effects, managing timing and signal output.  
