@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyrum Sycamore | Portfolio</title>
+    <style>
+        :root {
+            --sidebar-bg: #1e293b;
+            --sidebar-text: #f8fafc;
+            --accent: #3b82f6; /* BYU-ish Blue */
+            --bg-color: #f1f5f9;
+            --card-bg: #ffffff;
+            --text-main: #334155;
+            --text-header: #0f172a;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            min-height: 100vh;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+        }
+
+        /* --- Sidebar Navigation --- */
+        .sidebar {
+            width: 280px;
+            background-color: var(--sidebar-bg);
+            color: var(--sidebar-text);
+            padding: 2rem;
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            border-right: 1px solid #334155;
+        }
+
+        .profile-header {
+            margin-bottom: 2rem;
+        }
+
+        .profile-header h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #fff;
+        }
+
+        .profile-header p {
+            font-size: 0.9rem;
+            color: #94a3b8;
+            line-height: 1.4;
+        }
+
+        .nav-links {
+            list-style: none;
+            flex-grow: 1;
+        }
+
+        .nav-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .nav-links a {
+            display: block;
+            padding: 0.75rem 1rem;
+            color: #cbd5e1;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            background-color: var(--accent);
+            color: white;
+        }
+
+        .sidebar-footer {
+            margin-top: 2rem;
+            font-size: 0.8rem;
+            color: #64748b;
+        }
+
+        /* --- Main Content Area --- */
+        .main-content {
+            margin-left: 280px;
+            padding: 3rem 4rem;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        section {
+            margin-bottom: 4rem;
+            scroll-margin-top: 2rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: var(--text-header);
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid var(--accent);
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+
+        .intro-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-main);
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        /* --- Grid for Skills --- */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skill-card {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            border-left: 4px solid var(--accent);
+        }
+
+        .skill-card h3 {
+            margin-bottom: 0.5rem;
+            color: var(--text-header);
+        }
+
+        /* --- Dropdown / Accordion Style --- */
+        details {
+            background: var(--card-bg);
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        summary {
+            padding: 1.2rem 1.5rem;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--text-header);
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            border-left: 5px solid transparent;
+        }
+        
+        /* Custom marker */
+        summary::after {
+            content: '+'; 
+            font-size: 1.5rem;
+            color: var(--accent);
+        }
+
+        details[open] summary::after {
+            content: '-';
+        }
+
+        details[open] summary {
+            border-bottom: 1px solid #e2e8f0;
+            border-left: 5px solid var(--accent);
+            background-color: #f8fafc;
+        }
+
+        .details-content {
+            padding: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .details-content h4 {
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .details-content h4:first-child {
+            margin-top: 0;
+        }
+
+        .project-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            margin: 1rem 0;
+            border: 1px solid #e2e8f0;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: #e0f2fe;
+            color: #0369a1;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .link-btn {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            background-color: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        .link-btn:hover {
+            background-color: #2563eb;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                padding: 1.5rem;
+            }
+            .main-content {
+                margin-left: 0;
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="sidebar">
+        <div class="profile-header">
+            <h1>Hyrum Sycamore</h1>
+            <p>Computer Engineering Student<br>Brigham Young University</p>
+            <div style="margin-top: 1rem; font-size: 0.9rem;">
+                <p>GPA: 3.91 / 4.00</p>
+            </div>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">Technical Highlights</a></li>
+            <li><a href="#coursework">Current Coursework</a></li>
+            <li><a href="#projects">Completed Projects</a></li>
+            <li><a href="#inprogress">In Progress</a></li>
+            <li><a href="#future">Future Ideas</a></li>
+        </ul>
+
+        <div class="sidebar-footer">
+            <p>&copy; 2026 Hyrum Sycamore</p>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        
+        <section id="about">
+            <h2 class="section-title">Introduction</h2>
+            <div class="intro-text">
+                <p>I’m a computer engineering student at Brigham Young University with a strong interest in robotics, UAVs, and spacecraft—systems where software and hardware come together to interact with the physical world.</p>
+                <br>
+                <p>I’m currently finishing my junior year and am motivated by hands-on engineering work that takes ideas from concept through implementation. I enjoy working across the full engineering stack—schematic design, PCB layout, firmware development, debugging with lab equipment, and system integration.</p>
+                <br>
+                <p>I’m currently seeking internship opportunities where I can contribute to real-world engineering challenges, continue developing my embedded and systems-level skills, and work on projects that move—whether on the ground, in the air, or beyond it.</p>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2 class="section-title">Technical Highlights</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Languages</h3>
+                    <p>Python, C, C++, MATLAB</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Hardware</h3>
+                    <p>ESP32, Raspberry Pi, Arduino, Custom PCB Design (KiCad)</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Tools/OS</h3>
+                    <p>FreeRTOS, Linux, LTspice, Autodesk Fusion 360</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Protocols</h3>
+                    <p>SPI, I2C, UART, Multithreading</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="coursework">
+            <h2 class="section-title">Current Coursework</h2>
+            
+            <details>
+                <summary>ECEN 320: Fundamentals of Digital Systems</summary>
+                <div class="details-content">
+                    <h4>Focus</h4>
+                    <p>Digital Logic Design & Hardware Description Languages (HDL).</p>
+                    <h4>Key Skills</h4>
+                    <p>Designing complex combinational and sequential logic circuits; mastering SystemVerilog for RTL modeling; and implementing designs on FPGAs (Xilinx Artix-7) using modern synthesis tools like Vivado.</p>
+                </div>
+            </details>
+
+            <details open> <summary>ECEN 390: Junior Team Design Project</summary>
+                <div class="details-content">
+                    <h4>Focus</h4>
+                    <p>System-Level Integration & Collaborative Engineering.</p>
+                    <h4>Key Skills</h4>
+                    <p>Serving as the culminating "Junior Core" experience where I am integrating analog front-ends, digital signal processing (DSP), and embedded C firmware into a multiplayer Laser Tag system. This course emphasizes the full engineering lifecycle, from formal requirements to hardware-in-the-loop testing.</p>
+                </div>
+            </details>
+
+            <details>
+                <summary>ECEN 471: Machine Learning (Foundations & Apps)</summary>
+                <div class="details-content">
+                    <h4>Focus</h4>
+                    <p>Statistical Learning & Engineering Applications.</p>
+                    <h4>Key Skills</h4>
+                    <p>Implementing foundational ML algorithms (classification, regression, and clustering) specifically for engineering data; applying models to dynamical systems and time-series data—directly supporting my interest in autonomous drone and robotic navigation.</p>
+                </div>
+            </details>
+        </section>
+
+        <section id="projects">
+            <h2 class="section-title">Completed Projects</h2>
+
+            <details>
+                <summary>Luigi’s Mansion Game (ESP32)</summary>
+                <div class="details-content">
+                    <img src="https://github.com/user-attachments/assets/bf6660f4-f4ee-4ef3-a0ef-0e44477a92e7" alt="Luigi's Mansion Console View" class="project-image" style="width: 300px;">
+                    <br>
+                    <span class="badge">Embedded Systems</span>
+                    <span class="badge">Driver Dev</span>
+                    <span class="badge">Networking</span>
+                    
+                    <h4>Driver Development</h4>
+                    <p>Engineered custom peripheral drivers from scratch for the ESP32, including hardware abstractions for UART communication, digital button inputs, and analog joysticks.</p>
+                    <h4>Audio Engineering</h4>
+                    <p>Developed a dedicated sound driver to handle real-time playback of game sound effects, managing timing and signal output.</p>
+                    <h4>Networking</h4>
+                    <p>Designed a custom UART-based communication protocol to synchronize game states and player movement between two independent hardware units.</p>
+                    
+                    <a href="https://github.com/hyrumsycamore/Luigis_Mansion" class="link-btn" target="_blank">🔗 View Repository</a>
+                </div>
+            </details>
+
+            <details>
+                <summary>Custom Language Compiler</summary>
+                <div class="details-content">
+                    <span class="badge">C++</span>
+                    <span class="badge">Software Engineering</span>
+                    
+                    <h4>Architecture</h4>
+                    <p>Developed a functional compiler for a specialized SQL-like syntax using C++ as the foundation.</p>
+                    <h4>Implementation</h4>
+                    <p>Engineered lexical analysis and parsing logic to translate domain-specific commands into structured, executable code.</p>
+                </div>
+            </details>
+
+            <details>
+                <summary>Light Following Robot</summary>
+                <div class="details-content">
+                    <span class="badge">Arduino</span>
+                    <span class="badge">Robotics</span>
+                    <span class="badge">Sensor Fusion</span>
+
+                    <h4>Hardware</h4>
+                    <p>Engineered an Arduino Nano-based mobile robot equipped with photoresistors and ultrasonic sensors for environment mapping.</p>
+                    <h4>Control Logic</h4>
+                    <p>Developed autonomous navigation algorithms for light-tracking and reactive obstacle avoidance.</p>
+                    <h4>Signal Processing</h4>
+                    <p>Applied software-level signal filtering to interpret sensor data accurately and minimize jitter in variable lighting environments.</p>
+                </div>
+            </details>
+
+            <details>
+                <summary>Replacement Piano Key</summary>
+                <div class="details-content">
+                    <img src="https://github.com/user-attachments/assets/0285fde2-b57d-4946-8048-af2496c9a8a2" alt="Replacement Piano Key" class="project-image" style="width: 300px;">
+                    <br>
+                    <span class="badge">3D Printing</span>
+                    <span class="badge">AutoCAD</span>
+                    <span class="badge">Reverse Engineering</span>
+
+                    <h4>Modeling</h4>
+                    <p>Replicated vintage digital piano components by laser-scanning original parts and reconstructing complex geometries in AutoCAD.</p>
+                    <h4>Prototyping</h4>
+                    <p>Utilized 3D printing for iterative design testing, refining mechanical tolerances through multiple prints to restore original tactile response.</p>
+                    
+                    <a href="https://github.com/hyrumsycamore/CVP-103_piano_keys/tree/main" class="link-btn" target="_blank">🔗 View Repository</a>
+                </div>
+            </details>
+        </section>
+
+        <section id="inprogress">
+            <h2 class="section-title">In Progress Projects</h2>
+            
+            <details>
+                <summary>Laser Tag Gun</summary>
+                <div class="details-content">
+                    <p><strong>Focus:</strong> Analog Signal Processing & Wireless Communication.</p>
+                    <ul>
+                        <li>Designing a custom-built system using an ESP32 microcontroller.</li>
+                        <li>Developing a custom PCB that manages shot transmission via LED and reception through a photodiode.</li>
+                        <li>Implementing an amplifying band-pass filter to isolate specific signal frequencies and minimize environmental noise.</li>
+                    </ul>
+                </div>
+            </details>
+
+            <details>
+                <summary>Handheld Game Console</summary>
+                <div class="details-content">
+                    <p><strong>Focus:</strong> Low-level Driver Development & Protocol Integration.</p>
+                    <ul>
+                        <li>Engineering a battery-powered emulator featuring a custom PCB and integrated physical controls.</li>
+                        <li>Stitched together custom and existing drivers to manage SPI for display output and I2C for ADC communication.</li>
+                        <li>Developed a custom driver to interface an analog joystick with the RetroPie software environment.</li>
+                    </ul>
+                </div>
+            </details>
+
+            <details>
+                <summary>Lightsaber Belt</summary>
+                <div class="details-content">
+                    <p><strong>Focus:</strong> Power Management & Interactive Hardware.</p>
+                    <ul>
+                        <li>Developing a wearable belt featuring addressable RGB strips and a custom buckle housing integrated speakers.</li>
+                        <li>Engineering a multi-layer board to handle lithium battery management, audio amplification, and LED control logic.</li>
+                        <li>Implementing a microcontroller-based UI to allow for on-the-fly customization of blade animations and sound profiles.</li>
+                    </ul>
+                </div>
+            </details>
+        </section>
+
+        <section id="future">
+            <h2 class="section-title">Future Ideas</h2>
+            <div class="intro-text">
+                <p style="font-style: italic; margin-bottom: 1rem;">"I love using engineering to solve problems for the people I care about."</p>
+                
+                <h3 style="color: var(--accent); margin-top: 1.5rem;">The Ultimate Convertible Crib</h3>
+                <p>Family is a huge inspiration for me, and I’d love to build a crib that grows with my future kids. I’m planning to integrate a baby monitor, customizable night lights, and a white noise machine directly into the frame.</p>
+
+                <h3 style="color: var(--accent); margin-top: 1.5rem;">Automated Nerf Turret</h3>
+                <p>I want to dive into TinyML to create a turret that aims and fires on its own. The goal is to use object tracking and human recognition to spot "targets." I even want to add a layer that recognizes if someone is carrying a "safe item" so it doesn't fire on friends!</p>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        // Optional: Close other details when one is opened (Accordion behavior)
+        const details = document.querySelectorAll("details");
+
+        details.forEach((targetDetail) => {
+            targetDetail.addEventListener("click", () => {
+                details.forEach((detail) => {
+                    if (detail !== targetDetail) {
+                        detail.removeAttribute("open");
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
