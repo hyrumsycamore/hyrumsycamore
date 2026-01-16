@@ -41,10 +41,22 @@
             display: flex;
             flex-direction: column;
             border-right: 1px solid #334155;
+            text-align: center; /* Centered for photo */
         }
 
         .profile-header {
             margin-bottom: 2rem;
+        }
+
+        /* --- NEW PROFILE PHOTO STYLES --- */
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--accent);
+            margin-bottom: 1rem;
+            background-color: #334155; /* Fallback color */
         }
 
         .profile-header h1 {
@@ -52,17 +64,20 @@
             font-weight: 700;
             margin-bottom: 0.5rem;
             color: #fff;
+            text-align: center;
         }
 
         .profile-header p {
             font-size: 0.9rem;
             color: #94a3b8;
             line-height: 1.4;
+            text-align: center;
         }
 
         .nav-links {
             list-style: none;
             flex-grow: 1;
+            text-align: left; /* Reset text align for links */
         }
 
         .nav-links li {
@@ -87,6 +102,7 @@
             margin-top: 2rem;
             font-size: 0.8rem;
             color: #64748b;
+            text-align: center;
         }
 
         /* --- Main Content Area --- */
@@ -253,19 +269,21 @@
 
     <nav class="sidebar">
         <div class="profile-header">
+            <img src="https://via.placeholder.com/150" alt="Hyrum Sycamore" class="profile-photo">
+            
             <h1>Hyrum Sycamore</h1>
             <p>Computer Engineering Student<br>Brigham Young University</p>
             <div style="margin-top: 1rem; font-size: 0.9rem;">
-                <p>GPA: 3.91 / 4.00</p>
+                <p>GPA: 3.90 / 4.00</p>
             </div>
         </div>
 
         <ul class="nav-links">
             <li><a href="#about">About Me</a></li>
-            <li><a href="#skills">Technical Highlights</a></li>
-            <li><a href="#coursework">Current Coursework</a></li>
             <li><a href="#projects">Completed Projects</a></li>
             <li><a href="#inprogress">In Progress</a></li>
+            <li><a href="#skills">Technical Highlights</a></li>
+            <li><a href="#coursework">Current Coursework</a></li>
             <li><a href="#future">Future Ideas</a></li>
         </ul>
 
@@ -285,61 +303,6 @@
                 <br>
                 <p>I’m currently seeking internship opportunities where I can contribute to real-world engineering challenges, continue developing my embedded and systems-level skills, and work on projects that move—whether on the ground, in the air, or beyond it.</p>
             </div>
-        </section>
-
-        <section id="skills">
-            <h2 class="section-title">Technical Highlights</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <h3>Languages</h3>
-                    <p>Python, C, C++, MATLAB</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Hardware</h3>
-                    <p>ESP32, Raspberry Pi, Arduino, Custom PCB Design (KiCad)</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Tools/OS</h3>
-                    <p>FreeRTOS, Linux, LTspice, Autodesk Fusion 360</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Protocols</h3>
-                    <p>SPI, I2C, UART, Multithreading</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="coursework">
-            <h2 class="section-title">Current Coursework</h2>
-            
-            <details>
-                <summary>ECEN 320: Fundamentals of Digital Systems</summary>
-                <div class="details-content">
-                    <h4>Focus</h4>
-                    <p>Digital Logic Design & Hardware Description Languages (HDL).</p>
-                    <h4>Key Skills</h4>
-                    <p>Designing complex combinational and sequential logic circuits; mastering SystemVerilog for RTL modeling; and implementing designs on FPGAs (Xilinx Artix-7) using modern synthesis tools like Vivado.</p>
-                </div>
-            </details>
-
-            <details> <summary>ECEN 390: Junior Team Design Project</summary>
-                <div class="details-content">
-                    <h4>Focus</h4>
-                    <p>System-Level Integration & Collaborative Engineering.</p>
-                    <h4>Key Skills</h4>
-                    <p>Serving as the culminating "Junior Core" experience where I am integrating analog front-ends, digital signal processing (DSP), and embedded C firmware into a multiplayer Laser Tag system. This course emphasizes the full engineering lifecycle, from formal requirements to hardware-in-the-loop testing.</p>
-                </div>
-            </details>
-
-            <details>
-                <summary>ECEN 471: Machine Learning (Foundations & Apps)</summary>
-                <div class="details-content">
-                    <h4>Focus</h4>
-                    <p>Statistical Learning & Engineering Applications.</p>
-                    <h4>Key Skills</h4>
-                    <p>Implementing foundational ML algorithms (classification, regression, and clustering) specifically for engineering data; applying models to dynamical systems and time-series data—directly supporting my interest in autonomous drone and robotic navigation.</p>
-                </div>
-            </details>
         </section>
 
         <section id="projects">
@@ -437,6 +400,7 @@
                         <li>Stitched together custom and existing drivers to manage SPI for display output and I2C for ADC communication.</li>
                         <li>Developed a custom driver to interface an analog joystick with the RetroPie software environment.</li>
                     </ul>
+                    <a href="https://github.com/hyrumsycamore/foldable_console" class="link-btn" target="_blank">🔗 View Repository</a>
                 </div>
             </details>
 
@@ -449,6 +413,61 @@
                         <li>Engineering a multi-layer board to handle lithium battery management, audio amplification, and LED control logic.</li>
                         <li>Implementing a microcontroller-based UI to allow for on-the-fly customization of blade animations and sound profiles.</li>
                     </ul>
+                </div>
+            </details>
+        </section>
+
+        <section id="skills">
+            <h2 class="section-title">Technical Highlights</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Languages</h3>
+                    <p>Python, C, C++, MATLAB</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Hardware</h3>
+                    <p>ESP32, Raspberry Pi, Arduino, Custom PCB Design (KiCad)</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Tools/OS</h3>
+                    <p>FreeRTOS, Linux, LTspice, Autodesk Fusion 360</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Protocols</h3>
+                    <p>SPI, I2C, UART, Multithreading</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="coursework">
+            <h2 class="section-title">Current Coursework</h2>
+            
+            <details>
+                <summary>ECEN 320: Fundamentals of Digital Systems</summary>
+                <div class="details-content">
+                    <h4>Focus</h4>
+                    <p>Digital Logic Design & Hardware Description Languages (HDL).</p>
+                    <h4>Key Skills</h4>
+                    <p>Designing complex combinational and sequential logic circuits; mastering SystemVerilog for RTL modeling; and implementing designs on FPGAs (Xilinx Artix-7) using modern synthesis tools like Vivado.</p>
+                </div>
+            </details>
+
+            <details> <summary>ECEN 390: Junior Team Design Project</summary>
+                <div class="details-content">
+                    <h4>Focus</h4>
+                    <p>System-Level Integration & Collaborative Engineering.</p>
+                    <h4>Key Skills</h4>
+                    <p>Serving as the culminating "Junior Core" experience where I am integrating analog front-ends, digital signal processing (DSP), and embedded C firmware into a multiplayer Laser Tag system. This course emphasizes the full engineering lifecycle, from formal requirements to hardware-in-the-loop testing.</p>
+                </div>
+            </details>
+
+            <details>
+                <summary>ECEN 471: Machine Learning (Foundations & Apps)</summary>
+                <div class="details-content">
+                    <h4>Focus</h4>
+                    <p>Statistical Learning & Engineering Applications.</p>
+                    <h4>Key Skills</h4>
+                    <p>Implementing foundational ML algorithms (classification, regression, and clustering) specifically for engineering data; applying models to dynamical systems and time-series data—directly supporting my interest in autonomous drone and robotic navigation.</p>
                 </div>
             </details>
         </section>
