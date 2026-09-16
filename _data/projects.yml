@@ -15,15 +15,29 @@ completed:
       Programmed graphics, gameplay, signal input, sound effects, and timer functions for a simplified multiplayer Luigi game on ESP32 devices, using UART for real-time communication and synchronization between two units.
 
   - title: "New York Times Wordle Solver"
+    image: "photos/wordle.jpg"
     badges: ["Algorithms", "Information Theory", "Optimization"]
+    repo_link: "https://github.com/hyrumsycamore/wordler"
     description: | 
       Developed, programmed, and optimized multiple versions of a Wordle solver using letter frequency, word probability, entropy, and information theory. 
+  
+  - title: "Laser Tag Gun"
+    badges: ["ESP32", "PCB Design", "Signal Processing", "Mesh Network"]
+    description: |
+      Custom-built laser tag system using an ESP32 microcontroller. Features a custom PCB for shot transmission via LED and reception using a photodiode with an amplifying band-pass filter. Implemented a mesh-style ESP-NOW network for gun-to-gun communication and synchronization. Includes a digital display and sound effects for user interactivity.
 
+  - title: "Reverse-Engineered Digital Piano Keys"
+    image: "photos/piano"
+    badges: ["3D Modeling", "Reverse Engineering", "AutoCAD", "Rapid Prototyping"]
+    repo_link: "https://github.com/hyrumsycamore/CVP-103_piano_keys"
+    description: |
+      Reverse-engineered and 3D printed replacement keys for a Yamaha CVP-103 digital piano. Utilized 3D laser scans of the original parts to create highly accurate models in AutoCAD, iterating through multiple prototypes to perfectly fine-tune the dimensional tolerances and dynamic weighting.
+  
   - title: "Baby Cry Neural Net"
     badges: ["Machine Learning", "Neural Network", "PyTorch"]
     description: | 
       Engineered a deep neural network in PyTorch utilizing dropout regularization to classify infant cries by specific need, extracting acoustic audio features to achieve 95% classification accuracy. 
-
+  
   - title: "Predictive Model for E-Commerce Sales"
     badges: ["Machine Learning", "Random Forests", "Polynomial Regression"]
     description: | 
@@ -39,17 +53,7 @@ completed:
     description: |
       Developed and programmed a Raspberry Pi Zero system in C with multithreading to capture, filter, and upload images to a school-hosted website, featuring a basic user interface with button input.
   
-  - title: "Laser Tag Gun"
-    badges: ["ESP32", "PCB Design", "Signal Processing", "Mesh Network"]
-    description: |
-      Custom-built laser tag system using an ESP32 microcontroller. Features a custom PCB for shot transmission via LED and reception using a photodiode with an amplifying band-pass filter. Implemented a mesh-style ESP-NOW network for gun-to-gun communication and synchronization. Includes a digital display and sound effects for user interactivity.
   
-  - title: "Reverse-Engineered Digital Piano Keys"
-    image: "photos/piano"
-    badges: ["3D Modeling", "Reverse Engineering", "AutoCAD", "Rapid Prototyping"]
-    repo_link: "https://github.com/hyrumsycamore/CVP-103_piano_keys"
-    description: |
-      Reverse-engineered and 3D printed replacement keys for a Yamaha CVP-103 digital piano. Utilized 3D laser scans of the original parts to create highly accurate models in AutoCAD, iterating through multiple prototypes to perfectly fine-tune the dimensional tolerances and dynamic weighting.
 
 in_progress:
   - title: "ATtiny Educational Robot"
