@@ -50,22 +50,24 @@
         <!-- 3. In Progress Projects Loop -->
         <section id="inprogress">
             <h2 class="section-title">In Progress Projects</h2>
-            
             {% for project in site.data.projects.in_progress %}
-            <details>
-                <summary>{{ project.title }}</summary>
-                <div class="details-content">
-                    
-                    <!-- markdownify handles the bold text and bulleted lists -->
-                    {{ project.description | markdownify }}
-                    
-                    {% if project.repo_link %}
-                        <a href="{{ project.repo_link }}" class="link-btn" target="_blank">🔗 View Repository</a>
-                    {% endif %}
-                </div>
-            </details>
+                <!-- ... your existing details loop ... -->
             {% endfor %}
         </section>
+
+        <!-- 4. Future Ideas Loop (Moved here!) -->
+        <section id="future">
+            <h2 class="section-title">{{ site.data.future.heading }}</h2>
+            <div class="intro-text">
+                <p style="font-style: italic; margin-bottom: 1rem;">"{{ site.data.future.quote }}"</p>
+                {% for idea in site.data.future.ideas %}
+                    <h3 style="color: var(--accent); margin-top: 1.5rem;">{{ idea.title }}</h3>
+                    <p>{{ idea.description }}</p>
+                {% endfor %}
+            </div>
+        </section>
+
+    </main>
 
     </main>
 

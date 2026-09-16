@@ -1,5 +1,6 @@
 # _data/projects.yml
 completed:
+  - title: 
   - title: "Luigi’s Mansion Game (ESP32)"
     image: "photos/luigis-mansion-screenshot.jpg"
     badges: ["Embedded Systems", "Driver Dev", "Networking"]

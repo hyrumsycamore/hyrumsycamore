@@ -17,30 +17,96 @@
         
         <!-- About Section -->
         <section id="about">
-            <!-- Uses the data from _data/about.yml -->
             <h2 class="section-title">{{ site.data.about.heading }}</h2>
             <div class="intro-text">
                 {{ site.data.about.intro_text | markdownify }}
             </div>
         </section>
 
-        <!-- Future Ideas Section -->
-        <section id="future">
-            <h2 class="section-title">{{ site.data.future.heading }}</h2>
-            <div class="intro-text">
+        <!-- Professional Experience Section -->
+        <section id="experience">
+            <h2 class="section-title">Professional Experience</h2>
+            
+            {% for job in site.data.homepage.experience %}
+            <div class="intro-text" style="margin-bottom: 1.5rem;">
+                <h3 style="color: var(--text-header); margin-bottom: 0.25rem;">{{ job.role }}</h3>
                 
-                <!-- Renders the italicized quote -->
-                <p style="font-style: italic; margin-bottom: 1rem;">"{{ site.data.future.quote }}"</p>
+                <!-- Company and Date side-by-side -->
+                <h4 style="color: var(--accent); margin-bottom: 1rem; display: flex; justify-content: space-between;">
+                    <span>{{ job.company }}</span>
+                    <span style="color: #64748b; font-size: 0.9rem;">{{ job.dates }}</span>
+                </h4>
                 
-                <!-- Loops through the crib and the turret ideas -->
-                {% for idea in site.data.future.ideas %}
-                    <h3 style="color: var(--accent); margin-top: 1.5rem;">{{ idea.title }}</h3>
-                    <p>{{ idea.description }}</p>
+                <!-- Job Description (markdownify turns the asterisks into bullet points) -->
+                <div style="font-size: 1rem;">
+                    {{ job.description | markdownify }}
+                </div>
+            </div>
+            {% endfor %}
+        </section>
+
+        <!-- Core Competencies Section -->
+        <section id="competencies">
+            <h2 class="section-title">Core Competencies</h2>
+            <div class="skills-grid">
+                
+                {% for comp in site.data.homepage.competencies %}
+                <div class="skill-card">
+                    <h3>{{ comp.category }}</h3>
+                    <!-- 'join' takes the YAML array and prints it as a comma-separated list -->
+                    <p>{{ comp.skills | join: ", " }}</p>
+                </div>
                 {% endfor %}
                 
             </div>
         </section>
 
+        <!-- Project Spotlight Section -->
+        <section id="spotlight">
+            <h2 class="section-title">Project Spotlight</h2>
+            
+            <!-- Dynamically grab the first project from projects.yml -->
+            {% assign spotlight = site.data.projects.completed[0] %}
+            
+            <div class="intro-text" style="border-left: 4px solid var(--accent);">
+                <h3 style="color: var(--text-header); margin-bottom: 1rem;">{{ spotlight.title }}</h3>
+                
+                {% if spotlight.image %}
+                    <img src="{{ spotlight.image }}" alt="{{ spotlight.title }}" class="project-image" style="width: 100%; max-width: 400px; margin-bottom: 1rem;">
+                    <br>
+                {% endif %}
+                
+                <div style="margin-bottom: 1rem;">
+                    {% for badge in spotlight.badges %}
+                        <span class="badge">{{ badge }}</span>
+                    {% endfor %}
+                </div>
+                
+                <div style="font-size: 1rem; margin-bottom: 1.5rem;">
+                    {{ spotlight.description | markdownify }}
+                </div>
+                
+                <a href="projects.html" class="link-btn">View All Projects &rarr;</a>
+            </div>
+        </section>
+<!-- Beyond Engineering / Personal Section -->
+        <section id="personal">
+            <h2 class="section-title">{{ site.data.homepage.personal.heading }}</h2>
+            
+            <div class="intro-text" style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center;">
+                
+                <!-- Family Photo -->
+                <div style="flex: 1 1 250px;">
+                    <img src="{{ site.data.homepage.personal.photo }}" alt="{{ site.data.homepage.personal.alt_text }}" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); border: 2px solid #e2e8f0;">
+                </div>
+                
+                <!-- Personal Blurb -->
+                <div style="flex: 2 1 300px; font-size: 1rem;">
+                    {{ site.data.homepage.personal.description | markdownify }}
+                </div>
+                
+            </div>
+        </section>
     </main>
 
 </body>
