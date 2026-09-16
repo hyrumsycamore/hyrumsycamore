@@ -1,12 +1,5 @@
 # _data/projects.yml
 completed:
-  - title: "Handheld Game Console"
-    image: "photos/gameboy"
-    badges: ["Raspberry Pi", "PCB Design", "3D Modeling", "SPI", "I2C"] 
-    repo_link: "https://github.com/hyrumsycamore/foldable_console"
-    description: | 
-      Designed a battery-powered retro game emulator with custom PCB, integrated controls, and display; implemented microcontroller interfacing via GPIO, SPI, and I2C.
-  
   - title: "Luigi’s Mansion Game (ESP32)"
     image: "photos/luigi_mansion.jpg"
     badges: ["Embedded Systems", "Driver Dev", "Networking"]
@@ -14,6 +7,13 @@ completed:
     description: |
       Programmed graphics, gameplay, signal input, sound effects, and timer functions for a simplified multiplayer Luigi game on ESP32 devices, using UART for real-time communication and synchronization between two units.
 
+  - title: "Handheld Game Console"
+    image: "photos/gameboy"
+    badges: ["Raspberry Pi", "PCB Design", "3D Modeling", "SPI", "I2C"] 
+    repo_link: "https://github.com/hyrumsycamore/foldable_console"
+    description: | 
+      Designed a battery-powered retro game emulator with custom PCB, integrated controls, and display; implemented microcontroller interfacing via GPIO, SPI, and I2C.
+  
   - title: "New York Times Wordle Solver"
     image: "photos/wordle.jpg"
     badges: ["Algorithms", "Information Theory", "Optimization"]
