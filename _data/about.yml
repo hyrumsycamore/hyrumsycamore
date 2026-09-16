@@ -3,8 +3,11 @@ heading: "Introduction"
 
 # The pipe (|) lets you write multiple paragraphs naturally
 intro_text: |
-  I’m a computer engineering student at Brigham Young University with a strong interest in robotics, UAVs, and spacecraft—systems where software and hardware come together to interact with the physical world.
+  Hi, I'm Hyrum. I am a Computer Engineering student at Brigham Young University graduating in April 2027. 
+  I am an absolute builder at heart—when I get a new idea for a project, it plays in my head like a catchy song until I finally build it.
 
-  I’m motivated by hands-on engineering work that takes ideas from concept through implementation. I enjoy working across the full engineering stack—schematic design, PCB layout, firmware development, debugging with lab equipment, and system integration.
+  My primary fascination lies in the intersection of motion and mathematics. 
+  I love the beauty of control theory and the ability to use math to model and manipulate physical environments. 
 
-  I’m currently seeking internship opportunities where I can contribute to real-world engineering challenges, continue developing my embedded and systems-level skills, and work on projects that move—whether on the ground, in the air, or beyond it.
+  As an engineer, I thrive on full-system understanding. 
+  I am not content just working in one layer; I want to understand how every piece of the puzzle fits together, bridging the gap from custom electrical hardware and low-level firmware to the high-level software that drives it.

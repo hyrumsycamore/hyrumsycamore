@@ -3,7 +3,7 @@ photo: "photos/hyrum.jpg"
 name: "Hyrum Sycamore"
 title: "Computer Engineering Student"
 university: "Brigham Young University"
-gpa: "3.91 / 4.00"
+gpa: "3.90 / 4.00"
 
 navigation:
   - text: "About Me"

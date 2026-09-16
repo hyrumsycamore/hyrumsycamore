@@ -13,22 +13,28 @@ experience:
       * Optimized cold boot sequences, reducing system boot time by 70%.
       * Implemented a fault-tolerant secondary bootloader and automated boundary layer regression test suite.
       * Redesigned PID controllers with chamfered linear filters and optimized driver latency for data acquisition.
+      * Implemented a boundary layer regression testing suite. 
+      * Built a multi device control and data aquisition system featuring local logging and live online plotting. 
 
 competencies:
-  - category: "Hardware & Electronics"
-    skills: ["Custom PCB Design (KiCad)", "FPGA (Xilinx Artix-7)", "Microcontrollers (ESP32, ATtiny85)"]
+  - category: "Programming & HDLs"
+    skills: ["C/C++", "Python", "SystemVerilog", "MATLAB"]
     
-  - category: "Firmware & Software"
-    skills: ["C/C++", "Python", "SystemVerilog", "MATLAB", "SQL"]
+  - category: "Embedded Hardware"
+    skills: ["Microcontrollers (TI Sitara, NXP i.MX RT1170, Infineon TRAVEO, ESP32, ATtiny85)", "SBCs (Raspberry Pi)", "FPGA (Xilinx Artix-7, Basys 3)"]
     
-  - category: "Tools & Mechanical"
-    skills: ["Autodesk Fusion 360", "Git", "Docker", "PyTorch"]
+  - category: "Design & Engineering Tools"
+    skills: ["KiCad", "LTspice", "Autodesk Fusion 360"]
+    
+  - category: "Software Tools & Frameworks"
+    skills: ["Git", "Docker", "uv", "PyTorch"]
 
 personal:
   heading: "Beyond Engineering"
   photo: "photos/family.jpg"
   alt_text: "Hyrum Sycamore and family"
   description: |
-    When I'm not designing PCBs or debugging firmware, you can usually find me spending time outdoors, playing racquetball, or diving into an epic fantasy novel. 
+    I am a proud nerd and a lifelong tinkerer. I almost always have an engineering project running in the background, but when I'm not designing PCBs or writing firmware, I love exploring the great outdoors with my wife, cooking up something tasty, or diving into an epic fantasy novel. I’m a massive Brandon Sanderson fan—if you want to chat about the Cosmere, I can go for hours!
+    Above all, my family is my greatest inspiration. My absolute favorite builds are the ones where I can use engineering to solve real problems, create memorable experiences, and build meaningful gifts for the people I care about.
     
-    My family is a huge inspiration for everything I do. Ultimately, my favorite builds are the ones where I get to use engineering to solve problems, create experiences, and build gifts for the people I care about.
+    

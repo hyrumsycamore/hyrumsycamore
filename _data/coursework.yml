@@ -2,8 +2,13 @@
 
 - title: "ECEN 427: Embedded Systems"
   status: "In Progress"
-  description: "TODO"
-  badges: ["Embedded Linux", "Register Manipulation"]
+  description: "Currently engineering a bare-metal implementation of Space Invaders from scratch to explore low-level hardware-software interfacing. Developing primarily in C and Assembly, with active work focused on writing custom UIO and audio drivers, and configuring Direct Memory Access (DMA) for optimized system performance."
+  badges: ["Embedded Linux", "C", "Assembly" ]
+
+- title: "ECEN 433: Intro to Robotics and Autonomy"
+  status: "In Progress"
+  description: "Developing a software stack for an autonomous vehicle using ROS and the Duckietown platform. Currently applying core robotics principles to vehicle navigation, which includes implementing PID controllers for closed-loop control, generating kinematic models, and designing multi-step trajectory planning algorithms."
+  badges: ["ROS", "Closed Loop Controls", "Machine Learning", "Duckietown"]
 
 - title: "ECEN 320: Fundamentals of Digital Systems"
   status: "Completed"
@@ -12,5 +17,5 @@
 
 - title: "ECEN 471: Machine Learning"
   status: "Completed"
-  description: "Implementing foundational ML algorithms (classification, regression, and clustering) specifically for engineering data; applying models to dynamical systems and time-series data."
+  description: "Implementing foundational ML algorithms (classification and regression) specifically for engineering data; applying models to dynamical systems and time-series data."
   badges: ["Python", "Scikit-Learn", "PyTorch"]

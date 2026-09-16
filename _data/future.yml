@@ -8,3 +8,6 @@ ideas:
     
   - title: "Automated Nerf Turret"
     description: "I want to dive into TinyML to create a turret that aims and fires on its own. The goal is to use object tracking and human recognition to spot \"targets.\" I even want to add a layer that recognizes if someone is carrying a \"safe item\" so it doesn't fire on friends!"
+
+  - title: "Brick Bot"
+    description: "Designing a physical programming tool for STEM education. This future project will leverage bare-metal ATtiny software to drive a remote-controlled robot operated by a physical sequence of instruction bricks, teaching children basic coding logic."
