@@ -1,0 +1,258 @@
+:root {
+    --sidebar-bg: #1e293b;
+    --sidebar-text: #f8fafc;
+    --accent: #3b82f6; /* BYU-ish Blue */
+    --bg-color: #f1f5f9;
+    --card-bg: #ffffff;
+    --text-main: #334155;
+    --text-header: #0f172a;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+}
+
+/* --- Sidebar Navigation --- */
+.sidebar {
+    width: 280px;
+    background-color: var(--sidebar-bg);
+    color: var(--sidebar-text);
+    padding: 2rem;
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #334155;
+    text-align: center; /* Centered for photo */
+}
+
+.profile-header {
+    margin-bottom: 2rem;
+}
+
+/* --- NEW PROFILE PHOTO STYLES --- */
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--accent);
+    margin-bottom: 1rem;
+    background-color: #334155; /* Fallback color */
+}
+
+.profile-header h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #fff;
+    text-align: center;
+}
+
+.profile-header p {
+    font-size: 0.9rem;
+    color: #94a3b8;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.nav-links {
+    list-style: none;
+    flex-grow: 1;
+    text-align: left; /* Reset text align for links */
+}
+
+.nav-links li {
+    margin-bottom: 0.5rem;
+}
+
+.nav-links a {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: #cbd5e1;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.2s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    background-color: var(--accent);
+    color: white;
+}
+
+.sidebar-footer {
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    color: #64748b;
+    text-align: center;
+}
+
+/* --- Main Content Area --- */
+.main-content {
+    margin-left: 280px;
+    padding: 3rem 4rem;
+    width: 100%;
+    max-width: 1200px;
+}
+
+section {
+    margin-bottom: 4rem;
+    scroll-margin-top: 2rem;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: var(--text-header);
+    margin-bottom: 1.5rem;
+    border-bottom: 3px solid var(--accent);
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+.intro-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-main);
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Grid for Skills --- */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.skill-card {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    border-left: 4px solid var(--accent);
+}
+
+.skill-card h3 {
+    margin-bottom: 0.5rem;
+    color: var(--text-header);
+}
+
+/* --- Dropdown / Accordion Style --- */
+details {
+    background: var(--card-bg);
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+summary {
+    padding: 1.2rem 1.5rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--text-header);
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-left: 5px solid transparent;
+}
+
+/* Custom marker */
+summary::after {
+    content: '+'; 
+    font-size: 1.5rem;
+    color: var(--accent);
+}
+
+details[open] summary::after {
+    content: '-';
+}
+
+details[open] summary {
+    border-bottom: 1px solid #e2e8f0;
+    border-left: 5px solid var(--accent);
+    background-color: #f8fafc;
+}
+
+.details-content {
+    padding: 1.5rem;
+    line-height: 1.6;
+}
+
+.details-content h4 {
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+}
+
+.details-content h4:first-child {
+    margin-top: 0;
+}
+
+.project-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin: 1rem 0;
+    border: 1px solid #e2e8f0;
+}
+
+.badge {
+    display: inline-block;
+    background-color: #e0f2fe;
+    color: #0369a1;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.link-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--accent);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.link-btn:hover {
+    background-color: #2563eb;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 1.5rem;
+    }
+    .main-content {
+        margin-left: 0;
+        padding: 1.5rem;
+    }
+}

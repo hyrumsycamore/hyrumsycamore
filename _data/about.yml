@@ -1,0 +1,10 @@
+# _data/about.yml
+heading: "Introduction"
+
+# The pipe (|) lets you write multiple paragraphs naturally
+intro_text: |
+  I’m a computer engineering student at Brigham Young University with a strong interest in robotics, UAVs, and spacecraft—systems where software and hardware come together to interact with the physical world.
+
+  I’m motivated by hands-on engineering work that takes ideas from concept through implementation. I enjoy working across the full engineering stack—schematic design, PCB layout, firmware development, debugging with lab equipment, and system integration.
+
+  I’m currently seeking internship opportunities where I can contribute to real-world engineering challenges, continue developing my embedded and systems-level skills, and work on projects that move—whether on the ground, in the air, or beyond it.

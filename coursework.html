@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ site.data.sidebar.name }} | Coursework</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Inject the Sidebar -->
+    {% include sidebar.html %}
+
+    <main class="main-content">
+        
+        <section id="coursework">
+            <h2 class="section-title">Current & Past Coursework</h2>
+
+            <!-- Loop through the coursework.yml file -->
+            {% for course in site.data.coursework %}
+            <details>
+                <summary>
+                    {{ course.title }}
+                </summary>
+                
+                <div class="details-content">
+                    
+                    <!-- Optional: Display the status prominently -->
+                    {% if course.status %}
+                        <p style="font-size: 0.85rem; color: #64748b; margin-top: -0.5rem; margin-bottom: 1rem; text-transform: uppercase; font-weight: 600;">
+                            Status: {{ course.status }}
+                        </p>
+                    {% endif %}
+
+                    <!-- Loop through your badges (Embedded Linux, etc.) -->
+                    {% if course.badges %}
+                        <div style="margin-bottom: 1rem;">
+                            {% for badge in course.badges %}
+                                <span class="badge">{{ badge }}</span>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+
+                    <!-- Render the description -->
+                    {{ course.description | markdownify }}
+                    
+                </div>
+            </details>
+            {% endfor %}
+
+        </section>
+
+    </main>
+
+    <!-- Accordion Script -->
+    <script>
+        const details = document.querySelectorAll("details");
+
+        details.forEach((targetDetail) => {
+            targetDetail.addEventListener("click", () => {
+                details.forEach((detail) => {
+                    if (detail !== targetDetail) {
+                        detail.removeAttribute("open");
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

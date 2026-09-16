@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ site.data.sidebar.name }} | Projects</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. Inject the Sidebar -->
+    {% include sidebar.html %}
+
+    <main class="main-content">
+        
+        <!-- 2. Completed Projects Loop -->
+        <section id="projects">
+            <h2 class="section-title">Completed Projects</h2>
+
+            {% for project in site.data.projects.completed %}
+            <details>
+                <summary>{{ project.title }}</summary>
+                <div class="details-content">
+                    
+                    <!-- Only render an image if one is provided in the YAML -->
+                    {% if project.image %}
+                        <img src="{{ project.image }}" alt="{{ project.title }}" class="project-image" style="width: 300px;">
+                        <br>
+                    {% endif %}
+
+                    <!-- Loop through the tags -->
+                    {% for badge in project.badges %}
+                        <span class="badge">{{ badge }}</span>
+                    {% endfor %}
+
+                    <!-- Convert the YAML text (including bolding/headers) into HTML -->
+                    {{ project.description | markdownify }}
+                    
+                    <!-- Only render the button if a link is provided -->
+                    {% if project.repo_link %}
+                        <a href="{{ project.repo_link }}" class="link-btn" target="_blank">🔗 View Repository</a>
+                    {% endif %}
+                </div>
+            </details>
+            {% endfor %}
+        </section>
+
+        <!-- 3. In Progress Projects Loop -->
+        <section id="inprogress">
+            <h2 class="section-title">In Progress Projects</h2>
+            
+            {% for project in site.data.projects.in_progress %}
+            <details>
+                <summary>{{ project.title }}</summary>
+                <div class="details-content">
+                    
+                    <!-- markdownify handles the bold text and bulleted lists -->
+                    {{ project.description | markdownify }}
+                    
+                    {% if project.repo_link %}
+                        <a href="{{ project.repo_link }}" class="link-btn" target="_blank">🔗 View Repository</a>
+                    {% endif %}
+                </div>
+            </details>
+            {% endfor %}
+        </section>
+
+    </main>
+
+    <!-- 4. Accordion Script -->
+    <script>
+        const details = document.querySelectorAll("details");
+
+        details.forEach((targetDetail) => {
+            targetDetail.addEventListener("click", () => {
+                details.forEach((detail) => {
+                    if (detail !== targetDetail) {
+                        detail.removeAttribute("open");
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

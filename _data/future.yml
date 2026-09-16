@@ -1,0 +1,10 @@
+# _data/future.yml
+heading: "Future Ideas"
+quote: "I love using engineering to solve problems for the people I care about."
+
+ideas:
+  - title: "The Ultimate Convertible Crib"
+    description: "Family is a huge inspiration for me, and I’d love to build a crib that grows with my future kids. I’m planning to integrate a baby monitor, customizable night lights, and a white noise machine directly into the frame."
+    
+  - title: "Automated Nerf Turret"
+    description: "I want to dive into TinyML to create a turret that aims and fires on its own. The goal is to use object tracking and human recognition to spot \"targets.\" I even want to add a layer that recognizes if someone is carrying a \"safe item\" so it doesn't fire on friends!"

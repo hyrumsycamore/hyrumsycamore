@@ -1,0 +1,25 @@
+<!-- _includes/sidebar.html -->
+<nav class="sidebar">
+    <div class="profile-header">
+        <img src="{{ site.data.sidebar.photo }}" alt="{{ site.data.sidebar.name }}" class="profile-photo">
+        
+        <h1>{{ site.data.sidebar.name }}</h1>
+        <p>{{ site.data.sidebar.title }}<br>{{ site.data.sidebar.university }}</p>
+        <div style="margin-top: 1rem; font-size: 0.9rem;">
+            <p>GPA: {{ site.data.sidebar.gpa }}</p>
+        </div>
+    </div>
+
+    <ul class="nav-links">
+        <!-- This loop automatically builds your navigation links -->
+        {% for link in site.data.sidebar.navigation %}
+        <li>
+            <a href="{{ link.url }}">{{ link.text }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <div class="sidebar-footer">
+        <p>&copy; 2026 {{ site.data.sidebar.name }}</p>
+    </div>
+</nav>

@@ -1,0 +1,10 @@
+# _data/projects.yml
+- title: "Luigi’s Mansion Game (ESP32)"
+  badges: ["Embedded Systems", "Driver Dev", "Networking"]
+  repo_link: "https://github.com/hyrumsycamore/Luigis_Mansion"
+  description: "TODO"
+
+- title: "Light Following Robot"
+  badges: ["Arduino", "Robotics", "Sensor Fusion"]
+  repo_link: ""
+  description: "Engineered an Arduino Nano-based mobile robot..."

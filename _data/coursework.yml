@@ -1,0 +1,16 @@
+# _data/coursework.yml
+
+- title: "ECEN 427: Embedded Systems"
+  status: "In Progress"
+  description: "TODO"
+  badges: ["Embedded Linux", "Register Manipulation"]
+
+- title: "ECEN 320: Fundamentals of Digital Systems"
+  status: "Completed"
+  description: "Designing complex combinational and sequential logic circuits; mastering SystemVerilog for RTL modeling; and implementing designs on FPGAs (Xilinx Artix-7)."
+  badges: ["SystemVerilog", "FPGAs", "Vivado"]
+
+- title: "ECEN 471: Machine Learning"
+  status: "Completed"
+  description: "Implementing foundational ML algorithms (classification, regression, and clustering) specifically for engineering data; applying models to dynamical systems and time-series data."
+  badges: ["Python", "Scikit-Learn", "PyTorch"]

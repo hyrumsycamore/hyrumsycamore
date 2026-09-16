@@ -1,0 +1,20 @@
+# _data/sidebar.yml
+photo: "photos/hyrum.jpg"
+name: "Hyrum Sycamore"
+title: "Computer Engineering Student"
+university: "Brigham Young University"
+gpa: "3.91 / 4.00"
+
+navigation:
+  - text: "About Me"
+    url: "index.html"
+  - text: "Completed Projects"
+    url: "projects.html"
+  - text: "In Progress"
+    url: "projects.html#inprogress"
+  - text: "Technical Highlights"
+    url: "coursework.html"
+  - text: "Current Coursework"
+    url: "coursework.html#coursework"
+  - text: "Future Ideas"
+    url: "index.html#future"
