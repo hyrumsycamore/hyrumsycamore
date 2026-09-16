@@ -1,10 +1,22 @@
 # _data/projects.yml
-- title: "Luigi’s Mansion Game (ESP32)"
-  badges: ["Embedded Systems", "Driver Dev", "Networking"]
-  repo_link: "https://github.com/hyrumsycamore/Luigis_Mansion"
-  description: "TODO"
+completed:
+  - title: "Luigi’s Mansion Game (ESP32)"
+    image: "photos/luigis-mansion-screenshot.jpg"
+    badges: ["Embedded Systems", "Driver Dev", "Networking"]
+    repo_link: "https://github.com/hyrumsycamore/Luigis_Mansion"
+    description: |
+      #### Driver Development
+      Engineered custom peripheral drivers from scratch for the ESP32...
 
-- title: "Light Following Robot"
-  badges: ["Arduino", "Robotics", "Sensor Fusion"]
-  repo_link: ""
-  description: "Engineered an Arduino Nano-based mobile robot..."
+  - title: "Light Following Robot"
+    badges: ["Arduino", "Robotics", "Sensor Fusion"]
+    description: |
+      #### Hardware
+      Engineered an Arduino Nano-based mobile robot...
+
+in_progress:
+  - title: "Laser Tag Gun"
+    description: |
+      **Focus:** Analog Signal Processing & Wireless Communication.
+      * Designing a custom-built system using an ESP32 microcontroller.
+      * Developing a custom PCB that manages shot transmission...
