@@ -15,7 +15,7 @@ completed:
       Designed a battery-powered retro game emulator with custom PCB, integrated controls, and display; implemented microcontroller interfacing via GPIO, SPI, and I2C.
   
   - title: "New York Times Wordle Solver"
-    image: "photos/wordle.jpg"
+    image: "photos/wordle.png"
     badges: ["Algorithms", "Information Theory", "Optimization"]
     repo_link: "https://github.com/hyrumsycamore/wordler"
     description: | 
